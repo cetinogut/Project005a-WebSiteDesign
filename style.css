@@ -1,0 +1,277 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Assuming the browser font size is set to 16px (i.e. the default), 
+    setting the font size of the root html element to 100% will default 1rem to 16px. 
+    This is still not the optimal solution. A better approach will be to use 62.5%. 
+    This will equate 1rem to 10px. Starting with this as the base simplifies the calculations. */
+    /* font-size: 16px; */
+    font-size: 62.5%;
+    /* font size is 10px = 1rem */
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #fff;
+    padding-top: 3rem;
+    min-height: 100px;
+    border-bottom: #a9508b 3px solid;
+    font-weight:700px;
+}
+header span{
+    color:#a9508b
+}
+
+nav li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    line-height:2.4rem;
+    font-weight:bold;
+}
+header a:hover {
+    color: #ccc;
+    font-weight: bold;
+}
+p{
+    line-height: 23px;
+}
+.active a{
+    color:#a9508b;
+}
+.dark {
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btnSubscribe {
+    height: 38px;
+    background:  #a9508b;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.container__row {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container__column {
+    width: 80%;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+}
+
+/* banner */
+.brand{
+    line-height: 4.5rem;
+}
+
+.brand h2{
+    font-size:3rem;
+}
+
+.welcome__section{
+    min-height: 400px;
+    background: url('./images/showcase.jpg') no-repeat;
+    text-align: center;
+    color: #ffffff;
+}
+.welcome__section h1 {
+    padding-top: 100px;
+    font-size: 5.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome__section p {
+    font-size: 2rem;
+    line-height:3rem;
+    padding: 30px 30px
+}
+
+/* newsletter container*/
+.newsletter {
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
+    min-height: 100px;
+    padding-top: 3rem;;
+}
+
+.newsletter input[type="email"] {
+    padding: 4px;
+    height: 40px;
+    width: 250px;
+}
+
+/* services-rechnologies container */
+.technologies{
+    margin-top:20px;
+    min-height: 250px
+}
+
+.item{
+    text-align: center;
+    padding: 10px;
+    width:30%
+}
+
+.item h4{
+    margin: 10px;
+    padding: 10px;
+    font-size:1.8rem;
+    font-weight: bold;
+}
+item p{
+    padding: 10px;
+}
+
+/* footer -all pages */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: black;
+    background-color:#fffaf0;
+    text-align: center;
+    border-top: #a9508b 3px solid;
+}
+
+/* aside about, services */
+aside{
+    max-width: 300px;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+article h1{
+    margin: 20px 0;
+    
+}
+
+/* services page*/
+.services{
+    flex-grow: 2;
+}
+.services h2{
+    font-size:18px;
+    margin:20px 0;
+    line-height: 23px;
+    
+}
+
+.service-box p{
+    margin: 20px 0;
+}
+
+.service-box {
+    
+    padding: 20px;
+    border: #ccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+    
+}
+
+/* get quote form box*/
+.quote{
+    margin: 20px 0;
+}
+.quote input[type="email"] {
+    padding: 4px;
+    height: 40px;
+    width: 250px;
+}
+.quote input[type="text"] {
+    padding: 4px;
+    height: 40px;
+    width: 250px;
+}
+
+.quote textarea{
+    width:250px;
+}
+
+
+@media only screen and (max-width: 76.9rem){
+    /*Tablets [601px -> 1200px]*/
+    .brand h2{
+        font-size:2.4rem;
+        color: red;
+    }
+
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+
+    header{
+        padding-top: 1rem;
+    }
+    .brand h2{
+        font-size:2rem;
+        color: yellow;
+    }
+    .container__row {
+        /* width: 80%; */
+        margin: auto;
+        overflow: hidden;
+        display:flex;
+        flex-direction: column;
+        /* justify-content:end; */
+        
+    }
+    .newsletter h2{
+        font-size:2rem;
+        border:solid 1px red
+    }
+    .newsletter input[type="email"] {
+        margin: 10px 40px;
+        padding: 4px;
+        height: 30px;
+        width: 280px;
+        
+    }
+    .btnSubscribe {
+        height: 30px;
+        background:  #a9508b;
+        border: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
+    aside{
+        max-width: 300px;
+        width: 30%;
+        margin-top: 20px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+}
